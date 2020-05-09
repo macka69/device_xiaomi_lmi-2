@@ -24,6 +24,7 @@ import android.util.Log;
 
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingUtils;
+import org.lineageos.settings.thermal.ThermalUtils;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
@@ -51,6 +52,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         DozeUtils.checkDozeService(context);
         PopupCameraUtils.startService(context);
+        ThermalUtils.startService(context);
         TouchSamplingUtils.restoreSamplingValue(context);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
