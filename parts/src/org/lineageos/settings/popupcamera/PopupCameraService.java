@@ -129,7 +129,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
         mSensorManager = getSystemService(SensorManager.class);
         mFreeFallSensor =
                 mSensorManager.getDefaultSensor(Constants.FREE_FALL_SENSOR_ID);
-        mPopupCameraPreferences = new PopupCameraPreferences(this);
+        try{
+            mPopupCameraPreferences = new PopupCameraPreferences(this);
+        }
+        catch(Exception ex){
+            //wait for boot to complete
+        }
         mSoundPool =
                 new SoundPool.Builder()
                         .setMaxStreams(1)
