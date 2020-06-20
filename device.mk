@@ -288,7 +288,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
-    media_codecs_performance_c2.xml
+    media_codecs_performance_c2.xml \
+    video_system_specs.json
 
 # NFC
 PRODUCT_PACKAGES += \
