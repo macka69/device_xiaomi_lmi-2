@@ -229,3 +229,6 @@ renderthread.skia.reduceopstasksplitting=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+
+# Zygote
+zygote.critical_window.minute=10
