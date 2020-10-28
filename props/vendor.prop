@@ -239,3 +239,7 @@ ro.opengles.version=196610
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
+version=196610
+
+# Zygote
+zygote.critical_window.minute=10
