@@ -2,6 +2,7 @@
 ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
+persist.vendor.camera.privapp.list=com.android.camera
 log.tag.CHIUSECASE=ERROR
 
 # Charger
