@@ -6,6 +6,7 @@ ro.sf.blurs_are_expensive=1
 ro.launcher.blur.appLaunch=0
 
 # Camera
+persist.vendor.camera.privapp.list=com.android.camera
 log.tag.CHIUSECASE=ERROR
 
 # Charger
