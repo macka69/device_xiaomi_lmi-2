@@ -569,7 +569,7 @@ media/audio/ui/popup_yingyan_down.ogg
 media/audio/ui/popup_yingyan_up.ogg
 
 # Camera (postproc)
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|004d73d02b4967170ecc3f6e5450b0f56eaf4c5a|040754908683f59ee1b5b7f962f659fbed3a515a
 
 # CDSP
 vendor/bin/cdsprpcd

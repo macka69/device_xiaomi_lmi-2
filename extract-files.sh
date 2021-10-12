@@ -56,8 +56,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
-            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/210080529A0A0094/210080521F2003D5/g" | xxd -r -p > "${TMPDIR}/${1##*/}"
-            mv "${TMPDIR}/${1##*/}" "${2}"
+            "${SIGSCAN}" -p "9A 0A 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
         vendor/lib64/camera/components/com.mi.node.watermark.so)
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
