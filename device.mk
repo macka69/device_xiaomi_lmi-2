@@ -168,6 +168,9 @@ $(call inherit-product-if-exists, vendor/qcom/opensource/commonsys-intf/bluetoot
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
+    libbthost_if \
+    libbthost_if.vendor \
+    libldacBT_bco.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
