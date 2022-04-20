@@ -11,21 +11,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/xiaomi/lmi/device.mk)
 
-# Inherit some common bliss stuff.
-$(call inherit-product, vendor/bliss/config/common.mk)
+# Inherit some common Syberia stuff.
+$(call inherit-product, vendor/syberia/config/common.mk)
 
-# Set Boot Animination Resolution
+# Syberia OS Stuff
 TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_UDFPS_ANIMATIONS := true
 
-BLISS_BUILDTYPE=OFFICIAL
+$(call inherit-product, vendor/google/gms/config.mk)
 
-PRODUCT_NAME := bliss_lmi
+PRODUCT_NAME := syberia_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO F2 Pro
-
-EXTRA_UDFPS_ANIMATIONS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

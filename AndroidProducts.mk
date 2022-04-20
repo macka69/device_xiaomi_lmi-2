@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_lmi.mk
+    $(LOCAL_DIR)/syberia_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_lmi-eng \
-    bliss_lmi-user \
-    bliss_lmi-userdebug
+    syberia_lmi-user \
+    syberia_lmi-userdebug \
+    syberia_lmi-eng
