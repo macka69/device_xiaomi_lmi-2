@@ -1,3 +1,7 @@
 allow platform_app cgroup:file { open read };
 
 get_prop(platform_app, vendor_audio_prop);
+
+# Soter service
+allow platform_app vendor_hal_soter_hwservice:hwservice_manager find;
+binder_call(platform_app, vendor_hal_soter_qti)
