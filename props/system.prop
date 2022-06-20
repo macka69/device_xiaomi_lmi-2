@@ -6,7 +6,7 @@ ro.sf.blurs_are_expensive=1
 ro.launcher.blur.appLaunch=0
 
 # Camera
-vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.android.camera2,com.android.camera
 
 # Charger
 ro.charger.enable_suspend=1
