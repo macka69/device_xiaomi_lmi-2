@@ -91,8 +91,6 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # Package Manager
 PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.boot=verify \
-    pm.dexopt.first-boot=quicken \
     pm.dexopt.install=speed-profile \
     pm.dexopt.bg-dexopt=everything \
     pm.dexopt.ab-ota=quicken
