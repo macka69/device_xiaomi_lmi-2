@@ -554,5 +554,8 @@
     
     <!-- Screen off UDFPS -->
     <bool name="config_supportScreenOffUdfps">true</bool>
+    
+    <!-- Enable System Info -->
+    <bool name="config_supportSystemInfo">true</bool>
 
 </resources>
