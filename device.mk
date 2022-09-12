@@ -76,6 +76,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService-Soong \
+    com.dsi.ant@1.0.vendor
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -145,7 +150,6 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
-    com.dsi.ant@1.0.vendor \
     libbthost_if \
     libbthost_if.vendor \
     libldacBT_bco.vendor \
