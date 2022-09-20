@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/lmi/lmi-vendor.mk)
@@ -322,7 +322,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-arrow
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-awaken
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \

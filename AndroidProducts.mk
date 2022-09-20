@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The arrowOS Project
+# Copyright (C) 2021 The awakenOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_lmi.mk
+    $(LOCAL_DIR)/awaken_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_lmi-eng \
-    arrow_lmi-user \
-    arrow_lmi-userdebug
+    awaken_lmi-eng \
+    awaken_lmi-user \
+    awaken_lmi-userdebug
