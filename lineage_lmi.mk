@@ -18,7 +18,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 SUSHI_BOOTANIMATION := 1080
 
 # Gapps
-WITH_GMS := true
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
 PRODUCT_NAME := lineage_lmi
 PRODUCT_DEVICE := lmi
