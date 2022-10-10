@@ -17,9 +17,6 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Set Boot Animination Resolution
 SUSHI_BOOTANIMATION := 1080
 
-# Gapps
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
-
 PRODUCT_NAME := lineage_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_MANUFACTURER := Xiaomi
@@ -28,11 +25,9 @@ PRODUCT_MODEL := POCO F2 Pro
 
 # Rom Flags
 TARGET_HAS_UDFPS := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := true
-TARGET_BUILD_GRAPHENEOS_CAMERA := true
+TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+WITH_GMS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-BUILD_FINGERPRINT := Redmi/lmi/lmi:12/RKQ1.211001.001/V13.0.3.0.SJKMIXM:user/release-keys
