@@ -443,23 +443,11 @@
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/apex/com.android.art/javalib/arm64/boot.oat"</item>
         <item>"/apex/com.android.art/javalib/arm64/boot-core-libart.oat"</item>
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/system/bin/surfaceflinger"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
         <item>"/vendor/lib64/libcamxexternalformatutils.so"</item>
         <item>"/vendor/lib64/libipebpsstriping.so"</item>
         <item>"/vendor/lib64/libCB.so"</item>
         <item>"/vendor/lib64/libgsl.so"</item>
     </string-array>
-
-    <!-- True if camera app should be pinned via Pinner Service -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
-    <!-- True if home app should be pinned via Pinner Service -->
-    <bool name="config_pinnerHomeApp">true</bool>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
