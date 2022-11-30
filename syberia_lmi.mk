@@ -12,13 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/lmi/device.mk)
 
 # Inherit some common Syberia stuff.
-$(call inherit-product, vendor/syberia/config/common.mk)
+$(call inherit-product, vendor/syberia/common.mk)
 
 # Syberia OS Stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 EXTRA_UDFPS_ANIMATIONS := true
 
-$(call inherit-product, vendor/google/gms/config.mk)
+# Gapps
+WITH_GMS := true
 
 PRODUCT_NAME := syberia_lmi
 PRODUCT_DEVICE := lmi
