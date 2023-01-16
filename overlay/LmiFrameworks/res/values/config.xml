@@ -568,7 +568,7 @@
     <bool name="config_ledCanPulse">true</bool>
     
     <!-- Screen off UDFPS -->
-    <bool name="config_supportsScreenOffUdfps">true</bool>
+    <bool name="config_supportScreenOffUdfps">true</bool>
     
     <!-- System info -->
     <bool name="config_supportSystemInfo">true</bool>
