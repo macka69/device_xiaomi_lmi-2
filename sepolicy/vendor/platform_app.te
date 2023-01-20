@@ -4,3 +4,17 @@ allow platform_app cgroup:file { open read };
 allow platform_app vendor_sysfs_battery_supply:dir search;
 allow platform_app vendor_sysfs_battery_supply:file r_file_perms;
 allow platform_app vendor_sysfs_kgsl:file r_file_perms;
+
+allow platform_app {
+    hal_camerapostproc_xiaomi_hwservice
+    hal_misys_hwservice
+}:hwservice_manager find;
+
+# Allow MIUI camera app to read no. of cpus
+allow platform_app cgroup:file r_file_perms;
+
+allow platform_app app_data_file:file execute;
+
+binder_call(platform_app, hal_camera_default)
+
+get_prop(platform_app, vendor_fp_prop)
