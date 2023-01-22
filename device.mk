@@ -86,12 +86,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
-    com.dsi.ant.antradio_library \
     com.dsi.ant@1.0.vendor
-
-# Bluetooth ANT Wireless HAL Permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Atrace
 PRODUCT_PACKAGES += \
