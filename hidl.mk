@@ -33,7 +33,9 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    libloc_net_iface \
+    liblocdiagiface
 
 # Keymaster
 PRODUCT_PACKAGES += \
