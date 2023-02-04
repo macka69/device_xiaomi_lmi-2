@@ -569,9 +569,6 @@
     
     <!-- Screen off UDFPS -->
     <bool name="config_supportScreenOffUdfps">true</bool>
-    
-    <!-- Enable System Info -->
-    <bool name="config_supportSystemInfo">true</bool>
 
     <!-- List of comma separated package names for
     which we the system will not show crash, ANR,
