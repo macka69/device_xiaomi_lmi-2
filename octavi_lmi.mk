@@ -22,6 +22,6 @@ PRODUCT_MODEL := POCO F2 Pro
 
 # OctaviOS stuff
 EXTRA_UDFPS_ANIMATIONS := true
-WITH_GMS := true
+WITH_GAPPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
