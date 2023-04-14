@@ -1,15 +1,15 @@
 # All unpinned blobs are extracted from LMI - V14.0.1.0.SJKMIXM
 
-# ACDB
-vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_Handset_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_Hdmi_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_Headset_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_Speaker_cal.acdb
-vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp
-vendor/etc/acdbdata/adsp_avs_config.acdb
+# ACDB - cmi
+vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb|20137ab4d1c1e373c1b6127ae50dfee93cc5c99f
+vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb|0dc1d13a2aac4352a40c8739e0ce4d48b750d1e7
+vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb|61e551c9a88f13454d6e8d9be24f629cb524013d
+vendor/etc/acdbdata/Tutu/Tutu_Handset_cal.acdb|016dfa4727711992e17a778d718df0662af25916
+vendor/etc/acdbdata/Tutu/Tutu_Hdmi_cal.acdb|86f7adfc969125e768c09752d196b373df2a6c5a
+vendor/etc/acdbdata/Tutu/Tutu_Headset_cal.acdb|82fce7b4f9a82d654d187af3c918a71d74caaff8
+vendor/etc/acdbdata/Tutu/Tutu_Speaker_cal.acdb|371e0b1fbbf36b7f27d7c3d49a2ed38461f0918a
+vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp|3cd5b41fd3c67205c32053fc49ba2c8984ed3f6b
+vendor/etc/acdbdata/adsp_avs_config.acdb|bd5453d6fd844ccc4a5160a4cbd7871dcd1aa655
 
 # ACDB Loader
 vendor/lib/libacdb-fts.so
@@ -107,6 +107,17 @@ vendor/etc/mixer_paths_overlay_dynamic.xml
 vendor/etc/mixer_paths_overlay_static.xml
 vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_platform_info.xml
+
+# Acdbdata - lmi 13.0.3
+vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb|4737c525129d849c02958c93eca75128dd7c6d2f
+vendor/etc/acdbdata/Forte/Forte_General_cal.acdb|d775ff45660722943a628fb5f234e3acdf98f45b
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|2446cbb3af28ca8f2b1da9c5a1e65c2204bf64f8
+vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb|ce50c1f15099b39c2fdf2eadb1f16fda35741631
+vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb|2e08dc78525e42111daf1cd6a7789bb9cc6cfd63
+vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb|3b58ae694056419e91825958f2d2d90bc29dc017
+vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb|0b5fae990bd64510fe30d68c622a93c911053d45
+vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp|1c4afcf25d551450b342c3f67e9abd93df184628
+vendor/etc/acdbdata/adsp_avs_config.acdb|bd5453d6fd844ccc4a5160a4cbd7871dcd1aa655
 
 # Audio
 vendor/bin/audioflacapp
