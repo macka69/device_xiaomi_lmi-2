@@ -575,6 +575,9 @@
     <!-- Do the battery/notification LEDs support pulsing?
          Used to decide if we show pulse settings -->
     <bool name="config_ledCanPulse">true</bool>
+    
+    <!-- Screen off UDFPS -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
 
     <!-- List of comma separated package names for
     which we the system will not show crash, ANR,
