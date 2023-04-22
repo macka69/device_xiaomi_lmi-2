@@ -14,9 +14,6 @@ $(call inherit-product, device/xiaomi/lmi/device.mk)
 # Inherit some common Ricedroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Set Boot Animination Resolution
-SUSHI_BOOTANIMATION := 1080
-
 PRODUCT_NAME := lineage_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_MANUFACTURER := Xiaomi
