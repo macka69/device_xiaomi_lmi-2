@@ -392,10 +392,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
