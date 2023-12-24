@@ -16,6 +16,7 @@ $(call inherit-product, vendor/bliss/config/common.mk)
 
 # Set Boot Animination Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_ESSENTIAL_GAPPS := true
 
 BLISS_BUILDTYPE=OFFICIAL
 
