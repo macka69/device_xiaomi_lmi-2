@@ -214,8 +214,10 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health-service.example
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1.vendor
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
