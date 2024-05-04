@@ -219,9 +219,6 @@ telephony.lteOnCdmaDevice=1
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
-# Thermal
-vendor.sys.thermal.data.path=/data/vendor/thermal/
-
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl

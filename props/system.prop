@@ -29,6 +29,9 @@ persist.vendor.radio.report_codec=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=33,33
 
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
