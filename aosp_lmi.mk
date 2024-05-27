@@ -8,23 +8,24 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
 # Inherit from the device configuration.
 $(call inherit-product, device/xiaomi/lmi/device.mk)
 
-# Inherit some common Ricedroid stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-
-TARGET_BUILD_APERTURE_CAMERA := false
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
-PRODUCT_NAME := evolution_lmi
+PRODUCT_NAME := aosp_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO F2 Pro
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_USES_PICO_GAPPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
