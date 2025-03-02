@@ -348,6 +348,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiDolby \
+    XiaomiDolbyResCommon \
     XiaomiParts
 
 # Perf
