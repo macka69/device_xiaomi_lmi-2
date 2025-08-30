@@ -145,9 +145,6 @@ override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-# Media
-TARGET_USES_ION := true
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
