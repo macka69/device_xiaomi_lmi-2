@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libreverbwrapper \
     libvisualizer \
+    tinymix \
     libvolumelistener
 
 # Audio configs
