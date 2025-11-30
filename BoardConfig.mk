@@ -80,7 +80,7 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Camera
-$(call soong_config_set,camera,override_format_from_reserved,true)
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 TARGET_INCLUDES_MIUI_CAMERA := true
@@ -146,7 +146,7 @@ override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
