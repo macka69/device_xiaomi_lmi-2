@@ -2,6 +2,41 @@
 camera.disable_zsl_mode=true
 ro.product.mod_device=lmi_global
 
+# Disable problematic camera features
+persist.vendor.camera.anchorsync.disable=1
+persist.vendor.camera.expose.aux=0
+
+# Fix BufferQueue reconnection issues for MIUI Camera
+ro.vendor.camera.close.queue.before.disconnect=true
+persist.vendor.camera.close.queue=1
+persist.vendor.camera.force.session.close=1
+
+# CRITICAL - Increase ImageReader buffer limits
+ro.media.xml_variant.codecs=_vendor
+persist.vendor.camera.imagereader.maxImages=6
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Force ImageReader cleanup
+persist.camera.imagereader.close=1
+debug.camera.imagereader.close=true
+debug.camera.imagereader.maxbuffers=6
+
+# Limit concurrent ImageReader instances
+persist.vendor.camera.imagereader.maxcount=3
+
+# Aggressive buffer management
+persist.vendor.camera.bufferqueue.timeout=1000
+persist.vendor.camera.flush.enable=1
+persist.vendor.camera.flush.buffer=1
+
+# Reduce buffer counts to prevent exhaustion
+ro.vendor.camera.preview.buffer.count=6
+persist.vendor.camera.capture.buffer.count=6
+
+# Disable resource-intensive features that leak buffers
+persist.vendor.camera.reprocess.enable=0
+persist.vendor.camera.imagecodec.disable=1
+
 # Charger
 ro.charger.enable_suspend=1
 
