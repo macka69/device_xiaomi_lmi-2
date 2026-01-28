@@ -200,6 +200,10 @@ PRODUCT_PACKAGES += \
     libpng.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
+
+# Camera shim
+PRODUCT_PACKAGES += \
+    libgui_camera_shim
     
 # Charger
 PRODUCT_PACKAGES += \

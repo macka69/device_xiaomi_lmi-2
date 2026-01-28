@@ -1,0 +1,13 @@
+cc_library_shared {
+    name: "libgui_camera_shim",
+    srcs: ["libgui_camera_shim.cpp"],
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libc++",
+    ],
+    cflags: [
+        "-Wno-unused-parameter",
+        "-fvisibility=default",
+    ],
+}
