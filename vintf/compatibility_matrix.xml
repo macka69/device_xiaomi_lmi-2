@@ -100,4 +100,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>qccsyshal</instance>
         </interface>
    </hal>
+       <hal format="hidl" optional="true">
+        <name>android.hardware.ir</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IConsumerIr</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
