@@ -300,8 +300,7 @@ PRODUCT_PACKAGES += \
 
 # IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
+    android.hardware.ir-service.lineage
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -368,7 +367,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # OMX
 TARGET_SUPPORTS_OMX_SERVICE := false
-
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
