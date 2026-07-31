@@ -53,11 +53,6 @@ on post-fs-data
     mkdir /mnt/vendor/persist/goodix 0770 system system
     mkdir /mnt/vendor/persist/fpc 0770 system system
 
-    # Dt2w
-    chown system system /sys/touchpanel/double_tap
-    chmod 0666 /sys/touchpanel/double_tap
-    write /sys/touchpanel/double_tap 1
-
 on property:init.svc.vendor.nv_mac=stopped
     start vendor.btmac-sh
 
@@ -69,6 +64,8 @@ service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
     disabled
 
 on boot
+    chown system system /sys/touchpanel/double_tap
+    chmod 0666 /sys/touchpanel/double_tap
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chown system system /sys/class/touch/touch_dev/partial_diff_data
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
