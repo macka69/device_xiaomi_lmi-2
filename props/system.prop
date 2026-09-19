@@ -79,3 +79,6 @@ ro.config.sdha_apps_bg_min=8
 
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
+
+# Test
+ro.bpf.kver_override=5.10.239
