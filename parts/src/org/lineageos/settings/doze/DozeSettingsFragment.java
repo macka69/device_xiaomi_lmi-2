@@ -24,8 +24,6 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
@@ -37,10 +35,8 @@ import com.android.settingslib.widget.MainSwitchPreference;
 
 import org.lineageos.settings.R;
 
-public class DozeSettingsFragment extends PreferenceFragmentCompat implements OnPreferenceChangeListener,
-        OnCheckedChangeListener {
-
-    private MainSwitchPreference mSwitchBar;
+public class DozeSettingsFragment extends PreferenceFragmentCompat
+        implements OnPreferenceChangeListener {
 
     private SwitchPreferenceCompat mAlwaysOnDisplayPreference;
 
@@ -62,11 +58,13 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat implements On
 
         boolean dozeEnabled = DozeUtils.isDozeEnabled(getActivity());
 
-        mSwitchBar = (MainSwitchPreference) findPreference(DozeUtils.DOZE_ENABLE);
-        mSwitchBar.addOnSwitchChangeListener(this);
-        mSwitchBar.setChecked(dozeEnabled);
+        MainSwitchPreference switchBar =
+                (MainSwitchPreference) findPreference(DozeUtils.DOZE_ENABLE);
+        switchBar.setOnPreferenceChangeListener(this);
+        switchBar.setChecked(dozeEnabled);
 
-        mAlwaysOnDisplayPreference = (SwitchPreferenceCompat) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
+        mAlwaysOnDisplayPreference =
+                (SwitchPreferenceCompat) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
         mAlwaysOnDisplayPreference.setEnabled(dozeEnabled);
         mAlwaysOnDisplayPreference.setChecked(DozeUtils.isAlwaysOnEnabled(getActivity()));
         mAlwaysOnDisplayPreference.setOnPreferenceChangeListener(this);
@@ -80,7 +78,8 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat implements On
         mPickUpPreference.setEnabled(dozeEnabled);
         mPickUpPreference.setOnPreferenceChangeListener(this);
 
-        mHandwavePreference = (SwitchPreferenceCompat) findPreference(DozeUtils.GESTURE_HAND_WAVE_KEY);
+        mHandwavePreference =
+                (SwitchPreferenceCompat) findPreference(DozeUtils.GESTURE_HAND_WAVE_KEY);
         mHandwavePreference.setEnabled(dozeEnabled);
         mHandwavePreference.setOnPreferenceChangeListener(this);
 
@@ -104,8 +103,23 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat implements On
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (DozeUtils.ALWAYS_ON_DISPLAY.equals(preference.getKey())) {
-            DozeUtils.enableAlwaysOn(getActivity(), (Boolean) newValue);
+        final boolean isChecked = (Boolean) newValue;
+        final String key = preference.getKey();
+
+        if (DozeUtils.DOZE_ENABLE.equals(key)) {
+            DozeUtils.enableDoze(getActivity(), isChecked);
+
+            if (!isChecked) {
+                DozeUtils.enableAlwaysOn(getActivity(), false);
+                mAlwaysOnDisplayPreference.setChecked(false);
+            }
+            mAlwaysOnDisplayPreference.setEnabled(isChecked);
+
+            mPickUpPreference.setEnabled(isChecked);
+            mHandwavePreference.setEnabled(isChecked);
+            mPocketPreference.setEnabled(isChecked);
+        } else if (DozeUtils.ALWAYS_ON_DISPLAY.equals(key)) {
+            DozeUtils.enableAlwaysOn(getActivity(), isChecked);
         }
 
         mHandler.post(() -> DozeUtils.checkDozeService(getActivity()));
@@ -113,30 +127,12 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat implements On
         return true;
     }
 
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        DozeUtils.enableDoze(getActivity(), isChecked);
-        DozeUtils.checkDozeService(getActivity());
-
-        mSwitchBar.setChecked(isChecked);
-
-        if (!isChecked) {
-            DozeUtils.enableAlwaysOn(getActivity(), false);
-            mAlwaysOnDisplayPreference.setChecked(false);
-        }
-        mAlwaysOnDisplayPreference.setEnabled(isChecked);
-
-        mPickUpPreference.setEnabled(isChecked);
-        mHandwavePreference.setEnabled(isChecked);
-        mPocketPreference.setEnabled(isChecked);
-    }
-
     private void showHelp() {
         HelpDialogFragment fragment = new HelpDialogFragment();
         fragment.show(getParentFragmentManager(), "help_dialog");
     }
 
-    private static class HelpDialogFragment extends DialogFragment {
+    public static class HelpDialogFragment extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
