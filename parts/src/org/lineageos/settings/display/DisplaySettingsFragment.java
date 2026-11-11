@@ -21,13 +21,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
-public class DisplaySettingsFragment extends PreferenceFragment implements
+public class DisplaySettingsFragment extends PreferenceFragmentCompat implements
         OnPreferenceChangeListener {
         
     private SwitchPreferenceCompat mDcDimmingPreference;
@@ -39,7 +39,7 @@ public class DisplaySettingsFragment extends PreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.display_settings);
+        setPreferencesFromResource(R.xml.display_settings, rootKey);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
         mDcDimmingPreference = (SwitchPreferenceCompat) findPreference(DC_DIMMING_ENABLE_KEY);
         if (FileUtils.fileExists(DC_DIMMING_NODE)) {

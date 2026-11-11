@@ -20,25 +20,24 @@ package org.lineageos.settings.doze;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-
+import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
 import org.lineageos.settings.R;
 
-public class DozeSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener,
+public class DozeSettingsFragment extends PreferenceFragmentCompat implements OnPreferenceChangeListener,
         OnCheckedChangeListener {
 
     private MainSwitchPreference mSwitchBar;
@@ -53,7 +52,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.doze_settings);
+        setPreferencesFromResource(R.xml.doze_settings, rootKey);
 
         SharedPreferences prefs = getActivity().getSharedPreferences("doze_settings",
                 Activity.MODE_PRIVATE);
@@ -134,7 +133,7 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
     private void showHelp() {
         HelpDialogFragment fragment = new HelpDialogFragment();
-        fragment.show(getFragmentManager(), "help_dialog");
+        fragment.show(getParentFragmentManager(), "help_dialog");
     }
 
     private static class HelpDialogFragment extends DialogFragment {

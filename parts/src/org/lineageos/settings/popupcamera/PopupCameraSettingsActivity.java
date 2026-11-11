@@ -33,12 +33,12 @@ public class PopupCameraSettingsActivity extends CollapsingToolbarBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
         PopupCameraSettingsFragment popupCameraFragment;
 
         if (fragment == null) {
             popupCameraFragment = new PopupCameraSettingsFragment();
-            getFragmentManager()
+            getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.content_frame, popupCameraFragment, TAG_POPUPCAMERA)
                 .commit();
